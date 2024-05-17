@@ -1,0 +1,82 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#chat-container {
+    max-width: 800px;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #f8f8f8;
+}
+
+#header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+#user-input,
+#main-content,
+#message-input {
+    padding: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: calc(100% - 12px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+#main-content {
+    display: flex;
+}
+
+#peopleInRoom,
+#messageCenter {
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #f8f8f8;
+}
+
+#peopleInRoom {
+    background-color: #3498db;
+}
+
+#messageCenter {
+    background-color: #3498db;
+}
+
+#message-input input {
+    width: calc(100% - 80px);
+    margin-right: 5px;
+}
+
+#leaveButton {
+    background-color: #e74c3c;
+}

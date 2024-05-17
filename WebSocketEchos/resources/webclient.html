@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="webclient.css">
+    <link rel="icon" href="data:image/x-icon;,">
+    <title>WebChatClient</title>
+</head>
+
+<body>
+<div id="chat-container">
+    <div id="header">
+        <h1>Chat Room</h1>
+    </div>
+
+    <div id="user-input">
+        <label for="usernameValue">Username:</label>
+        <input id="usernameValue" placeholder="Username">
+        <label for="roomValue">Room:</label>
+        <input id="roomValue" placeholder="Room Name">
+        <button id="join">Join</button>
+    </div>
+
+    <div id="main-content">
+        <div id="peopleInRoom">
+            <h3><u>People In Room:</u></h3>
+        </div>
+        <div id="messageCenter">
+            <h3><u>Message Center:</u></h3>
+        </div>
+    </div>
+
+    <div id="message-input">
+        <label for="inputMessage">Message:</label>
+        <input id="inputMessage" placeholder="Type message">
+        <button id="sendButton">Send</button>
+        <button id="leaveButton">Leave Room</button>
+    </div>
+</div>
+
+<script type="text/javascript" src="webclient.js"></script>
+</body>
+
+</html>
