@@ -17,3 +17,23 @@ build/
 
 # Ignore temporary files
 *.tmp
+
+# Ignore binary files
+*.o
+
+# Ignore .dSYM files
+*.dSYM
+
+# Ignore .user files
+*.user
+
+# Ignore .app files
+*.app
+
+moc_msdscriptwidget.cpp
+
+# Ignore Makefile
+Makefile
+
+# Ignore .qtc_clangd folder
+.qtc_clangd/
