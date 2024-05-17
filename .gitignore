@@ -1,1 +1,19 @@
 .DS_Store
+
+# Ignore all .idea directories
+.idea/
+
+# Ignore all .iml files
+*.iml
+
+# Ignore all target directories (for Maven)
+target/
+
+# Ignore all build directories (for Gradle)
+build/
+
+# Ignore logs
+*.log
+
+# Ignore temporary files
+*.tmp
