@@ -37,3 +37,9 @@ Makefile
 
 # Ignore .qtc_clangd folder
 .qtc_clangd/
+
+# Ignore .txt files
+*.txt
+
+# Ignore cmake folder
+cmake-build-debug/
