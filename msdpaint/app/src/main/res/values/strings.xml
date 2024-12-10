@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">msdpaint</string>
+    <string name="select_circle"></string>
+    <string name="select_rectangle"></string>
+    <string name="select_pen"></string>
+    <string name="select_marble"></string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

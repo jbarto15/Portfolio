@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@color/popup_menu_background">
+
+    <ImageView
+        android:id="@+id/pathButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/path"
+        android:contentDescription="Pen"
+        android:padding="8dp"/>
+
+    <ImageView
+        android:id="@+id/circleButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/circle"
+        android:contentDescription="Circle"
+        android:padding="8dp"/>
+
+    <ImageView
+        android:id="@+id/squareButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/square"
+        android:contentDescription="Square"
+        android:padding="8dp"/>
+
+</LinearLayout>
