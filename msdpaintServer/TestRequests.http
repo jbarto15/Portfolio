@@ -1,0 +1,87 @@
+#POST http://127.0.0.1:8080/books/like
+#Content-Type: application/json
+#MY_SESSION: 3e5b333c33766d14b1899762e6669568
+#
+#{
+#  "title" : "Dune 3"
+#}
+#
+####
+#
+#//need to implement corressponding handler
+#POST http://127.0.0.1:8080/books/hate
+#Content-Type: application/json
+#MY_SESSION: ee1492c0dd5662d63868b3b8b907a5be
+#
+#{
+#  "title" : "Dune 6"
+#}
+#
+#####
+#
+#GET  http://127.0.0.1:8080/books/liked
+#MY_SESSION: 3e5b333c33766d14b1899762e6669568
+#
+#####
+#
+#GET http://127.0.0.1:8080/books
+#
+#
+
+### Add a user
+POST http://127.0.0.1:8080/adduser
+Content-Type: application/json
+
+{
+  "email": "knuckles@utah.edu"
+}
+
+### Get sonic user
+GET http://127.0.0.1:8080/getuser/sonic@utah.edu
+
+### Get knuckles user
+GET http://127.0.0.1:8080/getuser/knuckles@utah.edu
+
+### Backup Doodle Request , this is a picture of the brush png
+POST http://127.0.0.1:8080/backup
+Content-Type: application/json
+Authorization: sonic@utah.edu
+
+{
+  "user": "sonic@utah.edu",
+  "name": "My Doodle",
+  "timestamp": 1698882450000,
+  "blobString": "iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAAA5NJREFUeF7tnW1O4zAQQJ2T7XISkOBHbwF7i/4ACU5C92SBqZJVtiT2jD3JeD4qVaiSnUnfm7GTNDFDipcogUE0egRPIUA4CUJACBAmIBw+KiAECBMQDh8VEAKECQiHjwoIAcIEhMNHBYQAYQKF8A9Pp5dxTL9SSr+/35dhSH/fX88vXHsdFZAhOcF/vm0yDOkPl4QQsCFgC/7cnEtCCFgRUILPKSEE3AjAwueSEAIWAqjwOSSEgIliLfxWCSEgpdQKv0WCewFc8CcJl4+38x3lHMG1AGb4V+4fb2cSU1Jjitne2+4BH86UowIQ5neCn74vU9y9v54viF3418RdBewIv+ryhCsBvcGHMnAjoEf4bgT0Ct+FgJ7hmxfQO3zTAjTANytAC3yTAjTBNydAG3xTAjTCNyNAK3wTAjTDVy9AO3zVAizAVyvACnyVAizBVyfAGnxVAizCVyPAKnwVAizD716AdfhdC/AAv1sBXuB3KcATfDcCuB4notzxhm3b5X1BnFXQM/wuK2DOHA4JvcPvWgDsXIsEDfC7F1ArQQt8FQKoEjTBVyMAK0Eb/N0FPDydYH0FeKfFegvw8brmAvyFD9iHGnJzgkb4uwqgTKAUeGvbpfTHHp8f1Y79PACyfhwTLHBxzXzCC6oCnjIpPuKzlKAZPnsFULJ+SwwWKMSahi+2pWMIycLWlK0Cpsz/5NizmofdOOJKbINNwP3jCeBTh52t70x+3FMCHkdMFgEcQ8/tl8EORRwQJLfRLIBz6FmRQH7uVhJmTezDBCwzGnuk5KEKOATAonY/1lVbZMPmeH7/eBpzWRMCEDVVmnxzRzSIucP8ZNxcAaUsLq0e0tofkSNdNwkBwnqaBCCOgLJDSGt/YXYs4VsFVE/AsPcxBzQu1oGYgLNLuJT61yyAxJKWB26kugIQ2ZtdwKi1/4GMdg1VJQADD/Z66wiotf+uRA7eOFkAFt7WSRS2v4fhB1yjBMw/LRbOeP/LneUJWGv/g5Py0HBFAYSMZdtxD5cgZlhFAcjDRTb4XoYekoADJZi/9vPjkjsldfcejjz9FEmugLkD9lo+Ray3YWfJBjUHrMHkqgZPE+4ax2oBrRXhHXz1EJQbWhbH+/Bvn+A13yVxvdlquh0RbkVUfS8PcXjNNm+uAM6d8bitECBsPQSEAGECwuGjAkKAMAHh8FEBIUCYgHD4qIAQIExAOHxUQAgQJiAc/gts1FF/6QYl5AAAAABJRU5ErkJggg=="
+}
+### The string currently in the Blob field needs to be a valid Base64 string representation of an image
+### Replace "YOUR_FIREBASE_TOKEN_HERE" with a valid Firebase token obtained during authentication
+
+### Share Image Request
+POST http://127.0.0.1:8080/share
+Content-Type: application/json
+Authorization: sonic@utah.edu
+
+{
+  "user1": "sonic@utah.edu",
+  "user2": "knuckles@utah.edu",
+  "name": "My Doodle",
+  "timestamp": 1698882450000,
+  "blobString": "iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAAA5NJREFUeF7tnW1O4zAQQJ2T7XISkOBHbwF7i/4ACU5C92SBqZJVtiT2jD3JeD4qVaiSnUnfm7GTNDFDipcogUE0egRPIUA4CUJACBAmIBw+KiAECBMQDh8VEAKECQiHjwoIAcIEhMNHBYQAYQKF8A9Pp5dxTL9SSr+/35dhSH/fX88vXHsdFZAhOcF/vm0yDOkPl4QQsCFgC/7cnEtCCFgRUILPKSEE3AjAwueSEAIWAqjwOSSEgIliLfxWCSEgpdQKv0WCewFc8CcJl4+38x3lHMG1AGb4V+4fb2cSU1Jjitne2+4BH86UowIQ5neCn74vU9y9v54viF3418RdBewIv+ryhCsBvcGHMnAjoEf4bgT0Ct+FgJ7hmxfQO3zTAjTANytAC3yTAjTBNydAG3xTAjTCNyNAK3wTAjTDVy9AO3zVAizAVyvACnyVAizBVyfAGnxVAizCVyPAKnwVAizD716AdfhdC/AAv1sBXuB3KcATfDcCuB4notzxhm3b5X1BnFXQM/wuK2DOHA4JvcPvWgDsXIsEDfC7F1ArQQt8FQKoEjTBVyMAK0Eb/N0FPDydYH0FeKfFegvw8brmAvyFD9iHGnJzgkb4uwqgTKAUeGvbpfTHHp8f1Y79PACyfhwTLHBxzXzCC6oCnjIpPuKzlKAZPnsFULJ+SwwWKMSahi+2pWMIycLWlK0Cpsz/5NizmofdOOJKbINNwP3jCeBTh52t70x+3FMCHkdMFgEcQ8/tl8EORRwQJLfRLIBz6FmRQH7uVhJmTezDBCwzGnuk5KEKOATAonY/1lVbZMPmeH7/eBpzWRMCEDVVmnxzRzSIucP8ZNxcAaUsLq0e0tofkSNdNwkBwnqaBCCOgLJDSGt/YXYs4VsFVE/AsPcxBzQu1oGYgLNLuJT61yyAxJKWB26kugIQ2ZtdwKi1/4GMdg1VJQADD/Z66wiotf+uRA7eOFkAFt7WSRS2v4fhB1yjBMw/LRbOeP/LneUJWGv/g5Py0HBFAYSMZdtxD5cgZlhFAcjDRTb4XoYekoADJZi/9vPjkjsldfcejjz9FEmugLkD9lo+Ray3YWfJBjUHrMHkqgZPE+4ax2oBrRXhHXz1EJQbWhbH+/Bvn+A13yVxvdlquh0RbkVUfS8PcXjNNm+uAM6d8bitECBsPQSEAGECwuGjAkKAMAHh8FEBIUCYgHD4qIAQIExAOHxUQAgQJiAc/gts1FF/6QYl5AAAAABJRU5ErkJggg=="
+}
+
+### Retrieve My Images Request
+GET http://127.0.0.1:8080/retrieve/sonic@utah.edu
+Authorization: sonic@utah.edu
+
+
+### Retrieve Shared Images Request
+GET http://127.0.0.1:8080/retrieveShared/knuckles@utah.edu
+Authorization: knuckles@utah.edu
+
+### Delete a Doodle
+DELETE http://127.0.0.1:8080/doodles/delete/sonic@utah.edu/My Doodle
+Authorization: sonic@utah.edu
+
+
+
+
