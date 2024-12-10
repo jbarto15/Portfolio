@@ -1,5 +1,8 @@
 .DS_Store
 
+# Ignore goole-services.json file
+google-services.json
+
 # Ignore all .idea directories
 .idea/
 
